@@ -389,13 +389,13 @@ JSQMessagesKeyboardControllerDelegate>
 
 - (void)finishSendingMessageAnimated:(BOOL)animated {
 
-//    UITextView *textView = self.inputToolbar.contentView.textView;
-//    textView.text = nil;
-//    [textView.undoManager removeAllActions];
+    UITextView *textView = self.inputToolbar.contentView.textView;
+    textView.text = nil;
+    [textView.undoManager removeAllActions];
 
     [self.inputToolbar toggleSendButtonEnabled];
 
-    //[[NSNotificationCenter defaultCenter] postNotificationName:UITextViewTextDidChangeNotification object:textView];
+    [[NSNotificationCenter defaultCenter] postNotificationName:UITextViewTextDidChangeNotification object:textView];
 
     [self.collectionView.collectionViewLayout invalidateLayoutWithContext:[JSQMessagesCollectionViewFlowLayoutInvalidationContext context]];
     [self.collectionView reloadData];
