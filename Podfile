@@ -1,6 +1,6 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '12.0'
+platform :ios, '9.1'
 
 # ignore all warnings from all pods
 inhibit_all_warnings!
